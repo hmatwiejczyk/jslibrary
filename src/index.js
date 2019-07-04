@@ -1,4 +1,5 @@
-import './test.scss';
+import { Tooltip } from './ui/tooltip';
 
-console.log('test');
+const tooltip = new Tooltip(document.querySelector('.tooltip'));
 
+tooltip.init();
