@@ -1,6 +1,7 @@
 import { Tooltip } from './ui/tooltip';
 import { Dropdown } from './ui/dropdown';
 import { Tabs } from './ui/tabs';
+import { Toast } from './ui/toast';
 
 const tooltip = new Tooltip(document.querySelector('.tooltip'));
 
@@ -14,3 +15,11 @@ dropdowns.forEach(dropdown => {
 
 const tabs = new Tabs(document.querySelector('.tabs'));
 tabs.init();
+
+const toast = new Toast();
+toast.init();
+
+const toastTrigger = document.querySelector('.toast-trigger');
+toastTrigger.addEventListener('click', () => {
+  toast.show('hej');
+})
